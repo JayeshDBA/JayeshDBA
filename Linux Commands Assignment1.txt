@@ -1,0 +1,44 @@
+1. Find your current path
+Ans: PWD - Present working directory 
+2. By entering one command change your path to “/”
+Ans: cd / 
+and then check with PWD
+3. Again change your path to “/home/ec2-user”
+Ans: cd /home/ec2-user
+4. Create a directory with your first name
+Ans: mkdir Jayesh 
+and then ls -rtl
+5. Create a directory along with sub directory( Parent Directory : <your last name> sub directory <sha>
+Ans: mkdir -p nigam/sha
+then check with ls -rtl
+6. Long list all directory and files with hidden directory & files.
+Ans: ls -al
+7. Long list in reverse order.
+Ans: ls -tl
+8. Redirect long list of / mount point to your <first name > directory which you had created with a file name <mylist>.
+Ans: ls -l / >Jayesh/mylist
+9. Copy <mylist> to <mynewlist>
+Ans: cp mylist Jayesh/mynewlist
+10. Rename <mylist> to <mylist.old>
+Ans: mv Jayesh/mylist Jayesh/mylist.old
+11. Create a new directory with your last name and a sub directory <your location> under ec2-user directory (Using single command)
+Ans: mkdir -p/home/ec2user/Nigam/Noida
+12. Copy <first name> directory to <last name>/<your location> directory.
+Ans: cp -r/home/ec2-user/Jayesh /home/ec2user/Nigam/Noida
+13. Delete <first name> directory from ec2-user directory
+Ans: rmdis Jayesh
+14.Redirect the output of calendar 2025 to <mynewlist> keeping all previous contain of the file <mynewlist>.
+Ans: cal 2025 >> Jayesh/mynewlist
+15. Rename <your location> directory to <your first name>
+Ans: mv /home/ec2-user/Nigam/Noida /home/ec2user/Nigam/Jayesh
+16. Move <your first name> directory to ec2-user directory
+Ans: mv /home/ec2-user/Nigam/Jayesh /home/ec2-user/ 
+and then ls /home/ec2-user/
+17. Create a file <my commands> inside <last name> directory and type all the commands that you had learned till date.
+Ans: cat > /home/ec2-user/Nigam/my_commands
+18. Append current date to the above file
+Ans: date >> /home/ec2-user/Nigam/my_commands.
+19. Create a 0byte sized file inside <last name directory
+Ans: touch /home/ec2-user/Nigam/emptyfile
+20. Move last name directory into your first name directory inside ec2-user.
+Ans: mv /home/ec2-user/Nigam /home/ec2-user/Jayesh/
