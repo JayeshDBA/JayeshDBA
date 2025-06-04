@@ -1,44 +1,959 @@
+Assignment 1
 1. Find your current path
-Ans: PWD - Present working directory 
+
+pwd
+/home/ec2-user
+
 2. By entering one command change your path to “/”
-Ans: cd / 
-and then check with PWD
+
+cd /
+[ec2-user@ip-172-31-39-43 /]$ pwd
+/
+
 3. Again change your path to “/home/ec2-user”
-Ans: cd /home/ec2-user
+
+cd home/ec2-user
+[ec2-user@ip-172-31-39-43 ~]$ pwd
+/home/ec2-user
+
 4. Create a directory with your first name
-Ans: mkdir Jayesh 
-and then ls -rtl
-5. Create a directory along with sub directory( Parent Directory : <your last name> sub directory <sha>
-Ans: mkdir -p nigam/sha
-then check with ls -rtl
-6. Long list all directory and files with hidden directory & files.
-Ans: ls -al
-7. Long list in reverse order.
-Ans: ls -tl
-8. Redirect long list of / mount point to your <first name > directory which you had created with a file name <mylist>.
-Ans: ls -l / >Jayesh/mylist
+  mkdir jitendra
+drwxr-xr-x. 2 ec2-user ec2-user     6 May 27 07:14 jitendra
+
+
+5. Create a directory along with sub directory( Parent Directory : <your last name> sub directory
+<sha>
+
+mkdir -p Jayesh/sha
+ls -l Jayesh
+total 0
+drwxr-xr-x. 2 ec2-user ec2-user 6 May 27 07:16 sha
+
+6. Long list all directory and files with hidden directory & files
+
+ls -al
+total 688
+drwx------. 41 ec2-user ec2-user 16384 May 27 07:16 .
+drwxr-xr-x. 10 root     root       110 May 14 20:47 ..
+drwxr-xr-x.  2 ec2-user ec2-user     6 Mar 17 11:06 .ABCD
+-rw-------.  1 ec2-user ec2-user 12288 Mar 24 18:58 .Sam007.swp
+-rw-------.  1 ec2-user ec2-user 12288 May  7 09:22 .a1.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Apr 25 02:39 .add.sh.swo
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 14:49 .ashish.sh.swp
+-rw-------.  1 ec2-user ec2-user 14174 May 27 07:02 .bash_history
+-rw-r--r--.  1 ec2-user ec2-user    18 Jan 28  2023 .bash_logout
+-rw-r--r--.  1 ec2-user ec2-user   141 Jan 28  2023 .bash_profile
+-rw-r--r--.  1 ec2-user ec2-user   492 Jan 28  2023 .bashrc
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 18 16:40 .ben.txt.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 18 15:30 .ben10.swo
+-rw-------.  1 ec2-user ec2-user 12288 Mar 18 14:05 .ben10.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 May 15 10:31 .calculate_age.sh.swp
+drwx------.  3 ec2-user ec2-user    20 Mar  9 07:25 .config
+-rw-------.  1 ec2-user ec2-user 12288 May 27 07:02 .f1.swl
+-rw-r--r--.  1 ec2-user ec2-user 12288 May  4 06:25 .f1.swm
+-rw-r--r--.  1 ec2-user ec2-user 12288 Apr 30 09:34 .f1.swn
+-rw-r--r--.  1 ec2-user ec2-user 12288 Apr 28 14:03 .f1.swo
+-rw-r--r--.  1 ec2-user ec2-user 12288 Apr 27 07:55 .f1.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 18 14:10 .f105.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Apr 23 02:59 .file.abc.swp
+-rw-r--r--.  1 ec2-user ec2-user 16384 Mar 19 03:35 .file.swo
+-rw-r--r--.  1 ec2-user ec2-user 20480 Mar 18 01:56 .file.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 23 14:05 .fl001.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 22 18:07 .fl002.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Apr 28 22:01 .j1.swp
+-rw-r--r--.  1 ec2-user ec2-user     0 Apr 29 14:26 .jayesh.txt
+-rw-------.  1 ec2-user ec2-user 12288 Apr 25 02:36 .k01.d25.swp
+-rw-------.  1 ec2-user ec2-user 12288 Apr 25 02:29 .k01.tr.swp
+-rw-r-----.  1 ec2-user ec2-user 12288 Mar 20 02:33 .k_file.sh.swp
+-rw-------.  1 ec2-user ec2-user    20 May  6 13:24 .lesshst
+-rw-r--r--.  1 ec2-user ec2-user     0 May  1 02:59 .m1.txt
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 19 11:06 .message.txt.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 02:32 .mydata.sh.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 19 18:19 .myfile01.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 20 01:51 .myscript.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 02:25 .myscript.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 02:27 .myscript2.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 02:39 .p100.j.swp
+-rw-------.  1 ec2-user ec2-user 12288 Apr 25 02:38 .palak.sh.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 20 14:51 .public.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 22 14:06 .public.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 19 05:19 .roy.swn
+-rw-------.  1 ec2-user ec2-user 12288 Mar 18 15:14 .roy.swo
+-rw-------.  1 ec2-user ec2-user 12288 Mar 18 15:08 .roy.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 02:21 .ss.swp
+drwx------.  2 ec2-user ec2-user    29 Mar  6 02:20 .ssh
+-rw-------.  1 ec2-user ec2-user 12288 Mar 25 15:51 .sunil.sh.swo
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 25 15:29 .sunil.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 15:04 .swp
+drwxr-xr-x.  2 ec2-user ec2-user    24 Apr 25 02:34 .vim
+-rw-------.  1 ec2-user ec2-user 17992 May 27 07:02 .viminfo
+-rw-r--r--.  1 ec2-user ec2-user   276 Mar 17 06:54 .wget-hsts
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 18 01:55 .z01.new.swp
+-rw-r--r--.  1 ec2-user ec2-user   168 May  4 05:53 2020
+-rw-r--r--.  1 ec2-user ec2-user   168 May  4 05:53 2021
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 10:59 DHIRAJ
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:18 DHIRAJMEHTA
+-rw-r--r--.  1 ec2-user ec2-user     0 May 13 05:08 Nisham
+-rw-r-xr--.  1 ec2-user ec2-user  2372 May  6 13:26 R1
+-rwxr----x.  1 ec2-user ec2-user   232 May  1 14:05 a001.sh
+drwxr-xr-x.  4 ec2-user ec2-user    57 May  7 09:04 a01
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:04 a1
+drwxr-xr-x.  2 ec2-user ec2-user    29 May  7 11:11 aaa
+drwxr-xr-x.  2 ec2-user ec2-user     6 May  2 03:08 anirban
+drwxr-xr-x.  2 ec2-user ec2-user     6 May  2 03:09 anirban1
+drwxr-xr-x.  2 ec2-user ec2-user     6 May  2 03:09 anirban2
+drwxr-xr-x.  2 ec2-user ec2-user     6 May  2 03:09 anirban3
+-rwxr--r--.  1 ec2-user ec2-user   354 May 11 10:30 b001.sh
+-rw-r--r--.  1 ec2-user ec2-user     0 May 13 05:31 bbb
+drwxr-xr-x.  6 ec2-user ec2-user   120 May 24 10:24 bhavesh
+-rwxrwxrwx.  1 ec2-user ec2-user    89 May 16 17:48 calculate_age.sh
+-rw-r--r--.  1 ec2-user ec2-user 19196 May 13 05:23 commands
+drwxr-xr-x.  5 root     root        49 Apr 28 02:20 d01
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:04 d2
+-rw-r--r--.  1 ec2-user ec2-user     0 May  3 16:14 ddd
+-rw-r--r--.  1 ec2-user ec2-user     0 May 13 05:11 decode
+drwxr-xr-x.  6 ec2-user ec2-user   116 May 22 11:19 dhiraj
+drwxr-xr-x.  2 ec2-user ec2-user     6 May  4 17:46 directory11
+-rw-r--r--.  1 ec2-user ec2-user    15 May  3 13:48 f01
+-rwxrwxrwx.  1 ec2-user ec2-user     0 May  6 13:08 f03
+-rw-r--r--.  1 manoj    rishu       28 May  9 12:36 f1
+-rwxr--r--.  1 ec2-user ec2-user   133 May  1 14:07 f1.sh
+-rw-r--r--.  1 ec2-user ec2-user    14 May  8 11:21 f19
+-rwxr--r--.  1 ec2-user ec2-user   122 May  1 14:14 f2.sh
+-rwxr-xr-x.  1 ec2-user ec2-user   122 May  1 14:22 f3.sh
+-rw-r--r--.  1 ec2-user ec2-user     0 May  2 17:08 ff1
+drwxr-xr-x.  3 ec2-user ec2-user    27 May  8 11:30 ff2
+-rwxr-xr-x.  1 ec2-user ec2-user    93 May  7 11:40 ff2.sh
+-rw-r--r--.  1 jayesh   SHA          0 May  9 16:51 file
+-rwxrwxrwx.  1 ec2-user ec2-user    83 May 13 05:07 file.sh
+-rw-r--r--.  1 ec2-user ec2-user     0 May  2 03:10 file1
+-rw-r--r--.  1 ec2-user ec2-user     0 May  4 17:48 file101
+-rw-r--r--.  1 ec2-user ec2-user     0 May  2 17:08 fo1
+drwxr-xr-x.  3 ec2-user ec2-user    17 May  3 16:09 j01
+drwxr-xr-x.  2 root     root        40 May 11 11:27 jayesh
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 27 07:14 jitendra
+drwxr-xr-x.  3 ec2-user ec2-user    19 May  2 17:07 jj001
+drwxrwxrwx.  3 ec2-user ec2-user    41 May  3 13:50 jo1
+drwxr-xr-x.  3 ec2-user ec2-user    17 May 27 07:16 kumar
+-rw-r--r--.  1 root     root        92 May 11 08:19 l1
+-rwxr-xr-x.  1 ec2-user ec2-user    81 May  4 18:15 l2.sh
+-rw-r--r--.  1 ec2-user ec2-user    76 May 13 04:06 linux2
+-rwxr-xr-x.  1 ec2-user ec2-user   121 May 13 05:31 linux2.sh
+-rw-r--r--.  1 root     root         0 May  9 16:18 list
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:01 mindreader
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:15 moon2
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:15 moon3
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:15 moon4
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:15 moon5
+-rw-r--r--.  1 ec2-user ec2-user     0 May  4 08:18 my
+-rw-r--r--.  1 ec2-user ec2-user   137 May  9 16:47 mycommand
+-rw-r--r--.  1 ec2-user ec2-user   429 May  4 16:42 mycommands
+-rw-r--r--.  1 ec2-user ec2-user     0 May  9 16:18 mylist
+-rw-r--r--.  1 ec2-user ec2-user    75 May  1 14:05 mylocation.sh
+-rw-r--r--.  1 ec2-user ec2-user  2212 May  9 16:28 mynewlist
+drwxr-xr-x.  3 ec2-user ec2-user    23 May 22 11:23 nature
+-rw-r--r--.  1 ec2-user ec2-user     0 May 11 08:07 newlist
+drwxr-xr-x.  3 ec2-user ec2-user    69 May  6 13:11 orange
+-rw-r--r--.  1 ec2-user ec2-user     0 May 13 05:11 pratibha
+drwxr-xr-x.  4 ec2-user ec2-user    78 May 11 08:12 rishu
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:04 s1
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:08 s2
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:08 s3
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 20 07:19 salvi
+-rw-r--r--.  1 ec2-user ec2-user  2353 May  6 05:08 shanvi
+-rw-r--r--.  1 ec2-user ec2-user     0 May  4 08:49 size
+-rw-r--r--.  1 ec2-user ec2-user     0 May  2 17:09 ssf1
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:14 sun1
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:14 sun2
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:14 sun3
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:14 sun4
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:14 sun5
+drwxr-xr-x.  2 ec2-user ec2-user    19 May  2 07:18 test
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 10:57 u004
+drwxr-xr-x.  3 root     root        17 May  9 09:21 u01
+
+7. Long list in reverse order
+
+ls -rtla
+total 688
+-rw-r--r--.  1 ec2-user ec2-user   492 Jan 28  2023 .bashrc
+-rw-r--r--.  1 ec2-user ec2-user   141 Jan 28  2023 .bash_profile
+-rw-r--r--.  1 ec2-user ec2-user    18 Jan 28  2023 .bash_logout
+drwx------.  2 ec2-user ec2-user    29 Mar  6 02:20 .ssh
+drwx------.  3 ec2-user ec2-user    20 Mar  9 07:25 .config
+-rw-r--r--.  1 ec2-user ec2-user   276 Mar 17 06:54 .wget-hsts
+drwxr-xr-x.  2 ec2-user ec2-user     6 Mar 17 11:06 .ABCD
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 18 01:55 .z01.new.swp
+-rw-r--r--.  1 ec2-user ec2-user 20480 Mar 18 01:56 .file.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 18 14:05 .ben10.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 18 14:10 .f105.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 18 15:08 .roy.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 18 15:14 .roy.swo
+-rw-------.  1 ec2-user ec2-user 12288 Mar 18 15:30 .ben10.swo
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 18 16:40 .ben.txt.swp
+-rw-r--r--.  1 ec2-user ec2-user 16384 Mar 19 03:35 .file.swo
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 19 05:19 .roy.swn
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 19 11:06 .message.txt.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 19 18:19 .myfile01.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 20 01:51 .myscript.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 02:21 .ss.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 02:25 .myscript.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 02:27 .myscript2.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 02:32 .mydata.sh.swp
+-rw-r-----.  1 ec2-user ec2-user 12288 Mar 20 02:33 .k_file.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 02:39 .p100.j.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 14:49 .ashish.sh.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 20 14:51 .public.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 15:04 .swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 22 14:06 .public.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 22 18:07 .fl002.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 23 14:05 .fl001.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 24 18:58 .Sam007.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 25 15:29 .sunil.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 25 15:51 .sunil.sh.swo
+-rw-r--r--.  1 ec2-user ec2-user 12288 Apr 23 02:59 .file.abc.swp
+-rw-------.  1 ec2-user ec2-user 12288 Apr 25 02:29 .k01.tr.swp
+drwxr-xr-x.  2 ec2-user ec2-user    24 Apr 25 02:34 .vim
+-rw-------.  1 ec2-user ec2-user 12288 Apr 25 02:36 .k01.d25.swp
+-rw-------.  1 ec2-user ec2-user 12288 Apr 25 02:38 .palak.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Apr 25 02:39 .add.sh.swo
+-rw-r--r--.  1 ec2-user ec2-user 12288 Apr 27 07:55 .f1.swp
+drwxr-xr-x.  5 root     root        49 Apr 28 02:20 d01
+-rw-r--r--.  1 ec2-user ec2-user 12288 Apr 28 14:03 .f1.swo
+-rw-r--r--.  1 ec2-user ec2-user 12288 Apr 28 22:01 .j1.swp
+-rw-r--r--.  1 ec2-user ec2-user     0 Apr 29 14:26 .jayesh.txt
+-rw-r--r--.  1 ec2-user ec2-user 12288 Apr 30 09:34 .f1.swn
+-rw-r--r--.  1 ec2-user ec2-user     0 May  1 02:59 .m1.txt
+-rwxr----x.  1 ec2-user ec2-user   232 May  1 14:05 a001.sh
+-rw-r--r--.  1 ec2-user ec2-user    75 May  1 14:05 mylocation.sh
+-rwxr--r--.  1 ec2-user ec2-user   133 May  1 14:07 f1.sh
+-rwxr--r--.  1 ec2-user ec2-user   122 May  1 14:14 f2.sh
+-rwxr-xr-x.  1 ec2-user ec2-user   122 May  1 14:22 f3.sh
+drwxr-xr-x.  2 ec2-user ec2-user     6 May  2 03:08 anirban
+drwxr-xr-x.  2 ec2-user ec2-user     6 May  2 03:09 anirban3
+drwxr-xr-x.  2 ec2-user ec2-user     6 May  2 03:09 anirban2
+drwxr-xr-x.  2 ec2-user ec2-user     6 May  2 03:09 anirban1
+-rw-r--r--.  1 ec2-user ec2-user     0 May  2 03:10 file1
+drwxr-xr-x.  2 ec2-user ec2-user    19 May  2 07:18 test
+drwxr-xr-x.  3 ec2-user ec2-user    19 May  2 17:07 jj001
+-rw-r--r--.  1 ec2-user ec2-user     0 May  2 17:08 fo1
+-rw-r--r--.  1 ec2-user ec2-user     0 May  2 17:08 ff1
+-rw-r--r--.  1 ec2-user ec2-user     0 May  2 17:09 ssf1
+-rw-r--r--.  1 ec2-user ec2-user    15 May  3 13:48 f01
+drwxrwxrwx.  3 ec2-user ec2-user    41 May  3 13:50 jo1
+drwxr-xr-x.  3 ec2-user ec2-user    17 May  3 16:09 j01
+-rw-r--r--.  1 ec2-user ec2-user     0 May  3 16:14 ddd
+-rw-r--r--.  1 ec2-user ec2-user   168 May  4 05:53 2020
+-rw-r--r--.  1 ec2-user ec2-user   168 May  4 05:53 2021
+-rw-r--r--.  1 ec2-user ec2-user 12288 May  4 06:25 .f1.swm
+-rw-r--r--.  1 ec2-user ec2-user     0 May  4 08:18 my
+-rw-r--r--.  1 ec2-user ec2-user     0 May  4 08:49 size
+-rw-r--r--.  1 ec2-user ec2-user   429 May  4 16:42 mycommands
+drwxr-xr-x.  2 ec2-user ec2-user     6 May  4 17:46 directory11
+-rw-r--r--.  1 ec2-user ec2-user     0 May  4 17:48 file101
+-rwxr-xr-x.  1 ec2-user ec2-user    81 May  4 18:15 l2.sh
+-rw-r--r--.  1 ec2-user ec2-user  2353 May  6 05:08 shanvi
+-rwxrwxrwx.  1 ec2-user ec2-user     0 May  6 13:08 f03
+drwxr-xr-x.  3 ec2-user ec2-user    69 May  6 13:11 orange
+-rw-------.  1 ec2-user ec2-user    20 May  6 13:24 .lesshst
+-rw-r-xr--.  1 ec2-user ec2-user  2372 May  6 13:26 R1
+drwxr-xr-x.  4 ec2-user ec2-user    57 May  7 09:04 a01
+-rw-------.  1 ec2-user ec2-user 12288 May  7 09:22 .a1.sh.swp
+drwxr-xr-x.  2 ec2-user ec2-user    29 May  7 11:11 aaa
+-rwxr-xr-x.  1 ec2-user ec2-user    93 May  7 11:40 ff2.sh
+-rw-r--r--.  1 ec2-user ec2-user    14 May  8 11:21 f19
+drwxr-xr-x.  3 ec2-user ec2-user    27 May  8 11:30 ff2
+drwxr-xr-x.  3 root     root        17 May  9 09:21 u01
+-rw-r--r--.  1 manoj    rishu       28 May  9 12:36 f1
+-rw-r--r--.  1 root     root         0 May  9 16:18 list
+-rw-r--r--.  1 ec2-user ec2-user     0 May  9 16:18 mylist
+-rw-r--r--.  1 ec2-user ec2-user  2212 May  9 16:28 mynewlist
+-rw-r--r--.  1 ec2-user ec2-user   137 May  9 16:47 mycommand
+-rw-r--r--.  1 jayesh   SHA          0 May  9 16:51 file
+-rw-r--r--.  1 ec2-user ec2-user     0 May 11 08:07 newlist
+drwxr-xr-x.  4 ec2-user ec2-user    78 May 11 08:12 rishu
+-rw-r--r--.  1 root     root        92 May 11 08:19 l1
+-rwxr--r--.  1 ec2-user ec2-user   354 May 11 10:30 b001.sh
+drwxr-xr-x.  2 root     root        40 May 11 11:27 jayesh
+-rw-r--r--.  1 ec2-user ec2-user    76 May 13 04:06 linux2
+-rwxrwxrwx.  1 ec2-user ec2-user    83 May 13 05:07 file.sh
+-rw-r--r--.  1 ec2-user ec2-user     0 May 13 05:08 Nisham
+-rw-r--r--.  1 ec2-user ec2-user     0 May 13 05:11 pratibha
+-rw-r--r--.  1 ec2-user ec2-user     0 May 13 05:11 decode
+-rw-r--r--.  1 ec2-user ec2-user 19196 May 13 05:23 commands
+-rwxr-xr-x.  1 ec2-user ec2-user   121 May 13 05:31 linux2.sh
+-rw-r--r--.  1 ec2-user ec2-user     0 May 13 05:31 bbb
+drwxr-xr-x. 10 root     root       110 May 14 20:47 ..
+-rw-r--r--.  1 ec2-user ec2-user 12288 May 15 10:31 .calculate_age.sh.swp
+-rwxrwxrwx.  1 ec2-user ec2-user    89 May 16 17:48 calculate_age.sh
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 20 07:19 salvi
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 10:57 u004
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 10:59 DHIRAJ
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:01 mindreader
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:04 s1
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:04 d2
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:04 a1
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:08 s3
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:08 s2
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:14 sun5
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:14 sun4
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:14 sun3
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:14 sun2
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:14 sun1
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:15 moon5
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:15 moon4
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:15 moon3
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:15 moon2
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:18 DHIRAJMEHTA
+drwxr-xr-x.  6 ec2-user ec2-user   116 May 22 11:19 dhiraj
+drwxr-xr-x.  3 ec2-user ec2-user    23 May 22 11:23 nature
+drwxr-xr-x.  6 ec2-user ec2-user   120 May 24 10:24 bhavesh
+-rw-------.  1 ec2-user ec2-user 17992 May 27 07:02 .viminfo
+-rw-------.  1 ec2-user ec2-user 12288 May 27 07:02 .f1.swl
+-rw-------.  1 ec2-user ec2-user 14174 May 27 07:02 .bash_history
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 27 07:14 jitendra
+drwxr-xr-x.  3 ec2-user ec2-user    17 May 27 07:16 kumar
+drwx------. 41 ec2-user ec2-user 16384 May 27 07:16 .
+
+8. Redirect long list of / mount point to your <first name> directory which you had created with a
+file name <mylist>.
+
+ls -l / > jayesh/mylist
+[ec2-user@ip-172-31-39-43 ~]$ cat jayesh/mylist
+total 32
+lrwxrwxrwx.   1 root root     7 Jan 30  2023 bin -> usr/bin
+dr-xr-xr-x.   5 root root 16384 Feb 20 21:12 boot
+drwxr-xr-x.  14 root root  3060 Mar  6 02:20 dev
+drwxr-xr-x.  76 root root 16384 May 14 20:48 etc
+drwxr-xr-x.  10 root root   110 May 14 20:47 home
+lrwxrwxrwx.   1 root root     7 Jan 30  2023 lib -> usr/lib
+lrwxrwxrwx.   1 root root     9 Jan 30  2023 lib64 -> usr/lib64
+drwxr-xr-x.   2 root root     6 Feb 20 21:10 local
+drwxr-xr-x.   2 root root     6 Jan 30  2023 media
+drwxr-xr-x.   2 root root     6 Jan 30  2023 mnt
+drwxr-xr-x.   3 root root    17 Feb 20 21:12 opt
+dr-xr-xr-x. 155 root root     0 Mar  6 02:20 proc
+drwxr-xr-x.   2 root root     6 Mar 21 15:21 ps
+dr-xr-x---.   4 root root   181 May  9 12:36 root
+drwxr-xr-x.  28 root root   820 May  3 08:31 run
+lrwxrwxrwx.   1 root root     8 Jan 30  2023 sbin -> usr/sbin
+drwxr-xr-x.   2 root root     6 Jan 30  2023 srv
+dr-xr-xr-x.  13 root root     0 Mar  6 02:20 sys
+drwxrwxrwt.   7 root root   140 May 27 07:25 tmp
+drwxr-xr-x.   2 root root     6 Mar 20 02:52 u01
+drwxr-xr-x.   2 root root     6 Mar 20 14:15 u02
+drwxr-xr-x.  12 root root   144 Feb 20 21:11 usr
+drwxr-xr-x.  19 root root   266 Mar  6 02:20 var
+drwxr-xr-x.   2 root root     6 Mar 20 06:57 z02
+
 9. Copy <mylist> to <mynewlist>
-Ans: cp mylist Jayesh/mynewlist
+
+cp mylist jayesh/mynewlist
+[ec2-user@ip-172-31-39-43 ~]$ ls -l jayesh
+total 4
+-rw-r--r--. 1 ec2-user ec2-user 1242 May 27 07:26 mylist
+-rw-r--r--. 1 ec2-user ec2-user    0 May 27 07:28 mynewlist
+
+
 10. Rename <mylist> to <mylist.old>
-Ans: mv Jayesh/mylist Jayesh/mylist.old
-11. Create a new directory with your last name and a sub directory <your location> under ec2-user directory (Using single command)
-Ans: mkdir -p/home/ec2user/Nigam/Noida
-12. Copy <first name> directory to <last name>/<your location> directory.
-Ans: cp -r/home/ec2-user/Jayesh /home/ec2user/Nigam/Noida
+  mv jayesh/mylist jayesh/mylist.old
+[ec2-user@ip-172-31-39-43 ~]$ ls -l jayesh
+total 4
+-rw-r--r--. 1 ec2-user ec2-user 1242 May 27 07:26 mylist.old
+-rw-r--r--. 1 ec2-user ec2-user    0 May 27 07:28 mynewlist
+t
+
+11. Create a new directory with your last name and a sub directory <your location> under ec2-user
+directory (Using single command)
+
+ mkdir -p nigam/noida
+
+
+12. Copy <first name> directory to <last name>/<your location> directory
+
+ cp -r Jayesh nigam/noida
+[ec2-user@ip-172-31-39-43 ~]$ ls -l nigam
+total 0
+drwxr-xr-x. 3 ec2-user ec2-user 22 May 27 07:51 noida
+drwxr-xr-x. 2 ec2-user ec2-user  6 May 27 07:16 sha
+[ec2-user@ip-172-31-39-43 ~]$ ls -l nigam/noida
+total 0
+drwxr-xr-x. 2 ec2-user ec2-user 41 May 27 07:51 jayesh
+
 13. Delete <first name> directory from ec2-user directory
-Ans: rmdis Jayesh
-14.Redirect the output of calendar 2025 to <mynewlist> keeping all previous contain of the file <mynewlist>.
-Ans: cal 2025 >> Jayesh/mynewlist
+
+rm -r jayesh
+
+14. Redirect the output of calendar 2025 to <mynewlist>, keeping all previous contents of the file
+<mynewlist>
+
+cal 2025 >> mynewlist
 15. Rename <your location> directory to <your first name>
-Ans: mv /home/ec2-user/Nigam/Noida /home/ec2user/Nigam/Jayesh
+
+mv nigam/noida nigam/jayesh
+[ec2-user@ip-172-31-39-43 ~]$ ls -l nigam
+total 0
+drwxr-xr-x. 3 ec2-user ec2-user 22 May 27 07:51 jayesh
+drwxr-xr-x. 2 ec2-user ec2-user  6 May 27 07:16 sha
+
+
+
 16. Move <your first name> directory to ec2-user directory
-Ans: mv /home/ec2-user/Nigam/Jayesh /home/ec2-user/ 
-and then ls /home/ec2-user/
-17. Create a file <my commands> inside <last name> directory and type all the commands that you had learned till date.
-Ans: cat > /home/ec2-user/Nigam/my_commands
+
+ mv nigam/jayesh ec2-user
+ ls -l ec2-user
+total 0
+drwxr-xr-x. 3 ec2-user ec2-user 22 May 27 07:51 jitendra
+17. Create a file <my commands> inside <last name> directory and type all the commands that you
+had learned till date.
+
+vi commands
+
+
+ls- list of file and directoty
+ls-l - long list file and dir
+ls-tl -desending order
+ls-rtl ascending order
+ls-a hide file and dir
+ls-p -file and dir sepration
+cp file name dir -copy file into directory
+cp -r dir1 dir2 - copy of directory
+mv source destination -move file or
+rm file - remove file
+rm -r dir - remove directory
+rm -f dir - remove forcefully dir
+rmdir dir- remove 0 size dir
+cat f1-read mode
+cat > f1- write mode
+cat >> f1 -append mode (write start in last of the content)
+wc-l f1- find line of file
+wc-w f1 - find world of the file
+wc-c f1 - find charactor of file
+wc f1 - find all inforamation(w,c,l) of the file
+grep- used for find world in the filr
+grep-i -used for ignoring upeer or lower case
+greo -v - used for iagnoring that line
+vi f1 - linux editor
+mkdir - make dire
+touch- make file
+
+
+
 18. Append current date to the above file
-Ans: date >> /home/ec2-user/Nigam/my_commands.
+ date >> mycommands
+[ec2-user@ip-172-31-39-43 ~]$ cat mycommands
+
+df -h - how many mount point
+ls -what are inside root mount point
+ls -ls
+ls -tl ,ls- rtl
+ls -a ,ls -al
+mkdir dir/subdir, mkdir -p dir, ls -r dir
+ touch file, touch dir/file
+cat >f1. cat >>f1 ,cat f1
+cp s d , cp -r d d ,mv f d , mv -r d d, mv d/f d/f.new
+rm f, rm -r d, rm-f d ,rmdir
+wc -w f1, wc-l f1, wc- w f1 ,wc f1
+grep group f1, grep -i group, grep -v
+more f1 ,tail -10 f1 , head -10 f1
+vi f1
+Sun May  4 08:47:28 UTC 2025
+Tue May 27 09:05:47 UTC 2025
+[ec2-user@ip-172-31-39-43 ~]$
+
+
+
 19. Create a 0byte sized file inside <last name directory
-Ans: touch /home/ec2-user/Nigam/emptyfile
-20. Move last name directory into your first name directory inside ec2-user.
-Ans: mv /home/ec2-user/Nigam /home/ec2-user/Jayesh/
+
+touch nigam/0bite
+ls -l nigam
+total 0
+-rw-r--r--. 1 ec2-user ec2-user 0 May 27 09:08 0bite
+drwxr-xr-x. 2 ec2-user ec2-user 6 May 27 07:16 sha
+
+Assignment 1
+1. Find your current path
+
+pwd
+/home/ec2-user
+
+2. By entering one command change your path to “/”
+
+cd /
+[ec2-user@ip-172-31-39-43 /]$ pwd
+/
+
+3. Again change your path to “/home/ec2-user”
+
+cd home/ec2-user
+[ec2-user@ip-172-31-39-43 ~]$ pwd
+/home/ec2-user
+
+4. Create a directory with your first name
+  mkdir jitendra
+drwxr-xr-x. 2 ec2-user ec2-user     6 May 27 07:14 jitendra
+
+
+5. Create a directory along with sub directory( Parent Directory : <your last name> sub directory
+<sha>
+
+mkdir -p kumar/sha
+ls -l kumar
+total 0
+drwxr-xr-x. 2 ec2-user ec2-user 6 May 27 07:16 sha
+
+6. Long list all directory and files with hidden directory & files
+
+ls -al
+total 688
+drwx------. 41 ec2-user ec2-user 16384 May 27 07:16 .
+drwxr-xr-x. 10 root     root       110 May 14 20:47 ..
+drwxr-xr-x.  2 ec2-user ec2-user     6 Mar 17 11:06 .ABCD
+-rw-------.  1 ec2-user ec2-user 12288 Mar 24 18:58 .Sam007.swp
+-rw-------.  1 ec2-user ec2-user 12288 May  7 09:22 .a1.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Apr 25 02:39 .add.sh.swo
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 14:49 .ashish.sh.swp
+-rw-------.  1 ec2-user ec2-user 14174 May 27 07:02 .bash_history
+-rw-r--r--.  1 ec2-user ec2-user    18 Jan 28  2023 .bash_logout
+-rw-r--r--.  1 ec2-user ec2-user   141 Jan 28  2023 .bash_profile
+-rw-r--r--.  1 ec2-user ec2-user   492 Jan 28  2023 .bashrc
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 18 16:40 .ben.txt.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 18 15:30 .ben10.swo
+-rw-------.  1 ec2-user ec2-user 12288 Mar 18 14:05 .ben10.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 May 15 10:31 .calculate_age.sh.swp
+drwx------.  3 ec2-user ec2-user    20 Mar  9 07:25 .config
+-rw-------.  1 ec2-user ec2-user 12288 May 27 07:02 .f1.swl
+-rw-r--r--.  1 ec2-user ec2-user 12288 May  4 06:25 .f1.swm
+-rw-r--r--.  1 ec2-user ec2-user 12288 Apr 30 09:34 .f1.swn
+-rw-r--r--.  1 ec2-user ec2-user 12288 Apr 28 14:03 .f1.swo
+-rw-r--r--.  1 ec2-user ec2-user 12288 Apr 27 07:55 .f1.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 18 14:10 .f105.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Apr 23 02:59 .file.abc.swp
+-rw-r--r--.  1 ec2-user ec2-user 16384 Mar 19 03:35 .file.swo
+-rw-r--r--.  1 ec2-user ec2-user 20480 Mar 18 01:56 .file.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 23 14:05 .fl001.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 22 18:07 .fl002.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Apr 28 22:01 .j1.swp
+-rw-r--r--.  1 ec2-user ec2-user     0 Apr 29 14:26 .jayesh.txt
+-rw-------.  1 ec2-user ec2-user 12288 Apr 25 02:36 .k01.d25.swp
+-rw-------.  1 ec2-user ec2-user 12288 Apr 25 02:29 .k01.tr.swp
+-rw-r-----.  1 ec2-user ec2-user 12288 Mar 20 02:33 .k_file.sh.swp
+-rw-------.  1 ec2-user ec2-user    20 May  6 13:24 .lesshst
+-rw-r--r--.  1 ec2-user ec2-user     0 May  1 02:59 .m1.txt
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 19 11:06 .message.txt.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 02:32 .mydata.sh.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 19 18:19 .myfile01.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 20 01:51 .myscript.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 02:25 .myscript.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 02:27 .myscript2.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 02:39 .p100.j.swp
+-rw-------.  1 ec2-user ec2-user 12288 Apr 25 02:38 .palak.sh.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 20 14:51 .public.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 22 14:06 .public.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 19 05:19 .roy.swn
+-rw-------.  1 ec2-user ec2-user 12288 Mar 18 15:14 .roy.swo
+-rw-------.  1 ec2-user ec2-user 12288 Mar 18 15:08 .roy.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 02:21 .ss.swp
+drwx------.  2 ec2-user ec2-user    29 Mar  6 02:20 .ssh
+-rw-------.  1 ec2-user ec2-user 12288 Mar 25 15:51 .sunil.sh.swo
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 25 15:29 .sunil.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 15:04 .swp
+drwxr-xr-x.  2 ec2-user ec2-user    24 Apr 25 02:34 .vim
+-rw-------.  1 ec2-user ec2-user 17992 May 27 07:02 .viminfo
+-rw-r--r--.  1 ec2-user ec2-user   276 Mar 17 06:54 .wget-hsts
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 18 01:55 .z01.new.swp
+-rw-r--r--.  1 ec2-user ec2-user   168 May  4 05:53 2020
+-rw-r--r--.  1 ec2-user ec2-user   168 May  4 05:53 2021
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 10:59 DHIRAJ
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:18 DHIRAJMEHTA
+-rw-r--r--.  1 ec2-user ec2-user     0 May 13 05:08 Nisham
+-rw-r-xr--.  1 ec2-user ec2-user  2372 May  6 13:26 R1
+-rwxr----x.  1 ec2-user ec2-user   232 May  1 14:05 a001.sh
+drwxr-xr-x.  4 ec2-user ec2-user    57 May  7 09:04 a01
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:04 a1
+drwxr-xr-x.  2 ec2-user ec2-user    29 May  7 11:11 aaa
+drwxr-xr-x.  2 ec2-user ec2-user     6 May  2 03:08 anirban
+drwxr-xr-x.  2 ec2-user ec2-user     6 May  2 03:09 anirban1
+drwxr-xr-x.  2 ec2-user ec2-user     6 May  2 03:09 anirban2
+drwxr-xr-x.  2 ec2-user ec2-user     6 May  2 03:09 anirban3
+-rwxr--r--.  1 ec2-user ec2-user   354 May 11 10:30 b001.sh
+-rw-r--r--.  1 ec2-user ec2-user     0 May 13 05:31 bbb
+drwxr-xr-x.  6 ec2-user ec2-user   120 May 24 10:24 bhavesh
+-rwxrwxrwx.  1 ec2-user ec2-user    89 May 16 17:48 calculate_age.sh
+-rw-r--r--.  1 ec2-user ec2-user 19196 May 13 05:23 commands
+drwxr-xr-x.  5 root     root        49 Apr 28 02:20 d01
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:04 d2
+-rw-r--r--.  1 ec2-user ec2-user     0 May  3 16:14 ddd
+-rw-r--r--.  1 ec2-user ec2-user     0 May 13 05:11 decode
+drwxr-xr-x.  6 ec2-user ec2-user   116 May 22 11:19 dhiraj
+drwxr-xr-x.  2 ec2-user ec2-user     6 May  4 17:46 directory11
+-rw-r--r--.  1 ec2-user ec2-user    15 May  3 13:48 f01
+-rwxrwxrwx.  1 ec2-user ec2-user     0 May  6 13:08 f03
+-rw-r--r--.  1 manoj    rishu       28 May  9 12:36 f1
+-rwxr--r--.  1 ec2-user ec2-user   133 May  1 14:07 f1.sh
+-rw-r--r--.  1 ec2-user ec2-user    14 May  8 11:21 f19
+-rwxr--r--.  1 ec2-user ec2-user   122 May  1 14:14 f2.sh
+-rwxr-xr-x.  1 ec2-user ec2-user   122 May  1 14:22 f3.sh
+-rw-r--r--.  1 ec2-user ec2-user     0 May  2 17:08 ff1
+drwxr-xr-x.  3 ec2-user ec2-user    27 May  8 11:30 ff2
+-rwxr-xr-x.  1 ec2-user ec2-user    93 May  7 11:40 ff2.sh
+-rw-r--r--.  1 jayesh   SHA          0 May  9 16:51 file
+-rwxrwxrwx.  1 ec2-user ec2-user    83 May 13 05:07 file.sh
+-rw-r--r--.  1 ec2-user ec2-user     0 May  2 03:10 file1
+-rw-r--r--.  1 ec2-user ec2-user     0 May  4 17:48 file101
+-rw-r--r--.  1 ec2-user ec2-user     0 May  2 17:08 fo1
+drwxr-xr-x.  3 ec2-user ec2-user    17 May  3 16:09 j01
+drwxr-xr-x.  2 root     root        40 May 11 11:27 jayesh
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 27 07:14 jitendra
+drwxr-xr-x.  3 ec2-user ec2-user    19 May  2 17:07 jj001
+drwxrwxrwx.  3 ec2-user ec2-user    41 May  3 13:50 jo1
+drwxr-xr-x.  3 ec2-user ec2-user    17 May 27 07:16 kumar
+-rw-r--r--.  1 root     root        92 May 11 08:19 l1
+-rwxr-xr-x.  1 ec2-user ec2-user    81 May  4 18:15 l2.sh
+-rw-r--r--.  1 ec2-user ec2-user    76 May 13 04:06 linux2
+-rwxr-xr-x.  1 ec2-user ec2-user   121 May 13 05:31 linux2.sh
+-rw-r--r--.  1 root     root         0 May  9 16:18 list
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:01 mindreader
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:15 moon2
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:15 moon3
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:15 moon4
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:15 moon5
+-rw-r--r--.  1 ec2-user ec2-user     0 May  4 08:18 my
+-rw-r--r--.  1 ec2-user ec2-user   137 May  9 16:47 mycommand
+-rw-r--r--.  1 ec2-user ec2-user   429 May  4 16:42 mycommands
+-rw-r--r--.  1 ec2-user ec2-user     0 May  9 16:18 mylist
+-rw-r--r--.  1 ec2-user ec2-user    75 May  1 14:05 mylocation.sh
+-rw-r--r--.  1 ec2-user ec2-user  2212 May  9 16:28 mynewlist
+drwxr-xr-x.  3 ec2-user ec2-user    23 May 22 11:23 nature
+-rw-r--r--.  1 ec2-user ec2-user     0 May 11 08:07 newlist
+drwxr-xr-x.  3 ec2-user ec2-user    69 May  6 13:11 orange
+-rw-r--r--.  1 ec2-user ec2-user     0 May 13 05:11 pratibha
+drwxr-xr-x.  4 ec2-user ec2-user    78 May 11 08:12 rishu
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:04 s1
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:08 s2
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:08 s3
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 20 07:19 salvi
+-rw-r--r--.  1 ec2-user ec2-user  2353 May  6 05:08 shanvi
+-rw-r--r--.  1 ec2-user ec2-user     0 May  4 08:49 size
+-rw-r--r--.  1 ec2-user ec2-user     0 May  2 17:09 ssf1
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:14 sun1
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:14 sun2
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:14 sun3
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:14 sun4
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:14 sun5
+drwxr-xr-x.  2 ec2-user ec2-user    19 May  2 07:18 test
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 10:57 u004
+drwxr-xr-x.  3 root     root        17 May  9 09:21 u01
+
+7. Long list in reverse order
+
+ls -rtla
+total 688
+-rw-r--r--.  1 ec2-user ec2-user   492 Jan 28  2023 .bashrc
+-rw-r--r--.  1 ec2-user ec2-user   141 Jan 28  2023 .bash_profile
+-rw-r--r--.  1 ec2-user ec2-user    18 Jan 28  2023 .bash_logout
+drwx------.  2 ec2-user ec2-user    29 Mar  6 02:20 .ssh
+drwx------.  3 ec2-user ec2-user    20 Mar  9 07:25 .config
+-rw-r--r--.  1 ec2-user ec2-user   276 Mar 17 06:54 .wget-hsts
+drwxr-xr-x.  2 ec2-user ec2-user     6 Mar 17 11:06 .ABCD
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 18 01:55 .z01.new.swp
+-rw-r--r--.  1 ec2-user ec2-user 20480 Mar 18 01:56 .file.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 18 14:05 .ben10.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 18 14:10 .f105.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 18 15:08 .roy.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 18 15:14 .roy.swo
+-rw-------.  1 ec2-user ec2-user 12288 Mar 18 15:30 .ben10.swo
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 18 16:40 .ben.txt.swp
+-rw-r--r--.  1 ec2-user ec2-user 16384 Mar 19 03:35 .file.swo
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 19 05:19 .roy.swn
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 19 11:06 .message.txt.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 19 18:19 .myfile01.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 20 01:51 .myscript.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 02:21 .ss.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 02:25 .myscript.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 02:27 .myscript2.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 02:32 .mydata.sh.swp
+-rw-r-----.  1 ec2-user ec2-user 12288 Mar 20 02:33 .k_file.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 02:39 .p100.j.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 14:49 .ashish.sh.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 20 14:51 .public.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 20 15:04 .swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 22 14:06 .public.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 22 18:07 .fl002.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 23 14:05 .fl001.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 24 18:58 .Sam007.swp
+-rw-r--r--.  1 ec2-user ec2-user 12288 Mar 25 15:29 .sunil.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Mar 25 15:51 .sunil.sh.swo
+-rw-r--r--.  1 ec2-user ec2-user 12288 Apr 23 02:59 .file.abc.swp
+-rw-------.  1 ec2-user ec2-user 12288 Apr 25 02:29 .k01.tr.swp
+drwxr-xr-x.  2 ec2-user ec2-user    24 Apr 25 02:34 .vim
+-rw-------.  1 ec2-user ec2-user 12288 Apr 25 02:36 .k01.d25.swp
+-rw-------.  1 ec2-user ec2-user 12288 Apr 25 02:38 .palak.sh.swp
+-rw-------.  1 ec2-user ec2-user 12288 Apr 25 02:39 .add.sh.swo
+-rw-r--r--.  1 ec2-user ec2-user 12288 Apr 27 07:55 .f1.swp
+drwxr-xr-x.  5 root     root        49 Apr 28 02:20 d01
+-rw-r--r--.  1 ec2-user ec2-user 12288 Apr 28 14:03 .f1.swo
+-rw-r--r--.  1 ec2-user ec2-user 12288 Apr 28 22:01 .j1.swp
+-rw-r--r--.  1 ec2-user ec2-user     0 Apr 29 14:26 .jayesh.txt
+-rw-r--r--.  1 ec2-user ec2-user 12288 Apr 30 09:34 .f1.swn
+-rw-r--r--.  1 ec2-user ec2-user     0 May  1 02:59 .m1.txt
+-rwxr----x.  1 ec2-user ec2-user   232 May  1 14:05 a001.sh
+-rw-r--r--.  1 ec2-user ec2-user    75 May  1 14:05 mylocation.sh
+-rwxr--r--.  1 ec2-user ec2-user   133 May  1 14:07 f1.sh
+-rwxr--r--.  1 ec2-user ec2-user   122 May  1 14:14 f2.sh
+-rwxr-xr-x.  1 ec2-user ec2-user   122 May  1 14:22 f3.sh
+drwxr-xr-x.  2 ec2-user ec2-user     6 May  2 03:08 anirban
+drwxr-xr-x.  2 ec2-user ec2-user     6 May  2 03:09 anirban3
+drwxr-xr-x.  2 ec2-user ec2-user     6 May  2 03:09 anirban2
+drwxr-xr-x.  2 ec2-user ec2-user     6 May  2 03:09 anirban1
+-rw-r--r--.  1 ec2-user ec2-user     0 May  2 03:10 file1
+drwxr-xr-x.  2 ec2-user ec2-user    19 May  2 07:18 test
+drwxr-xr-x.  3 ec2-user ec2-user    19 May  2 17:07 jj001
+-rw-r--r--.  1 ec2-user ec2-user     0 May  2 17:08 fo1
+-rw-r--r--.  1 ec2-user ec2-user     0 May  2 17:08 ff1
+-rw-r--r--.  1 ec2-user ec2-user     0 May  2 17:09 ssf1
+-rw-r--r--.  1 ec2-user ec2-user    15 May  3 13:48 f01
+drwxrwxrwx.  3 ec2-user ec2-user    41 May  3 13:50 jo1
+drwxr-xr-x.  3 ec2-user ec2-user    17 May  3 16:09 j01
+-rw-r--r--.  1 ec2-user ec2-user     0 May  3 16:14 ddd
+-rw-r--r--.  1 ec2-user ec2-user   168 May  4 05:53 2020
+-rw-r--r--.  1 ec2-user ec2-user   168 May  4 05:53 2021
+-rw-r--r--.  1 ec2-user ec2-user 12288 May  4 06:25 .f1.swm
+-rw-r--r--.  1 ec2-user ec2-user     0 May  4 08:18 my
+-rw-r--r--.  1 ec2-user ec2-user     0 May  4 08:49 size
+-rw-r--r--.  1 ec2-user ec2-user   429 May  4 16:42 mycommands
+drwxr-xr-x.  2 ec2-user ec2-user     6 May  4 17:46 directory11
+-rw-r--r--.  1 ec2-user ec2-user     0 May  4 17:48 file101
+-rwxr-xr-x.  1 ec2-user ec2-user    81 May  4 18:15 l2.sh
+-rw-r--r--.  1 ec2-user ec2-user  2353 May  6 05:08 shanvi
+-rwxrwxrwx.  1 ec2-user ec2-user     0 May  6 13:08 f03
+drwxr-xr-x.  3 ec2-user ec2-user    69 May  6 13:11 orange
+-rw-------.  1 ec2-user ec2-user    20 May  6 13:24 .lesshst
+-rw-r-xr--.  1 ec2-user ec2-user  2372 May  6 13:26 R1
+drwxr-xr-x.  4 ec2-user ec2-user    57 May  7 09:04 a01
+-rw-------.  1 ec2-user ec2-user 12288 May  7 09:22 .a1.sh.swp
+drwxr-xr-x.  2 ec2-user ec2-user    29 May  7 11:11 aaa
+-rwxr-xr-x.  1 ec2-user ec2-user    93 May  7 11:40 ff2.sh
+-rw-r--r--.  1 ec2-user ec2-user    14 May  8 11:21 f19
+drwxr-xr-x.  3 ec2-user ec2-user    27 May  8 11:30 ff2
+drwxr-xr-x.  3 root     root        17 May  9 09:21 u01
+-rw-r--r--.  1 manoj    rishu       28 May  9 12:36 f1
+-rw-r--r--.  1 root     root         0 May  9 16:18 list
+-rw-r--r--.  1 ec2-user ec2-user     0 May  9 16:18 mylist
+-rw-r--r--.  1 ec2-user ec2-user  2212 May  9 16:28 mynewlist
+-rw-r--r--.  1 ec2-user ec2-user   137 May  9 16:47 mycommand
+-rw-r--r--.  1 jayesh   SHA          0 May  9 16:51 file
+-rw-r--r--.  1 ec2-user ec2-user     0 May 11 08:07 newlist
+drwxr-xr-x.  4 ec2-user ec2-user    78 May 11 08:12 rishu
+-rw-r--r--.  1 root     root        92 May 11 08:19 l1
+-rwxr--r--.  1 ec2-user ec2-user   354 May 11 10:30 b001.sh
+drwxr-xr-x.  2 root     root        40 May 11 11:27 jayesh
+-rw-r--r--.  1 ec2-user ec2-user    76 May 13 04:06 linux2
+-rwxrwxrwx.  1 ec2-user ec2-user    83 May 13 05:07 file.sh
+-rw-r--r--.  1 ec2-user ec2-user     0 May 13 05:08 Nisham
+-rw-r--r--.  1 ec2-user ec2-user     0 May 13 05:11 pratibha
+-rw-r--r--.  1 ec2-user ec2-user     0 May 13 05:11 decode
+-rw-r--r--.  1 ec2-user ec2-user 19196 May 13 05:23 commands
+-rwxr-xr-x.  1 ec2-user ec2-user   121 May 13 05:31 linux2.sh
+-rw-r--r--.  1 ec2-user ec2-user     0 May 13 05:31 bbb
+drwxr-xr-x. 10 root     root       110 May 14 20:47 ..
+-rw-r--r--.  1 ec2-user ec2-user 12288 May 15 10:31 .calculate_age.sh.swp
+-rwxrwxrwx.  1 ec2-user ec2-user    89 May 16 17:48 calculate_age.sh
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 20 07:19 salvi
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 10:57 u004
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 10:59 DHIRAJ
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:01 mindreader
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:04 s1
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:04 d2
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:04 a1
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:08 s3
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:08 s2
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:14 sun5
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:14 sun4
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:14 sun3
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:14 sun2
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 22 11:14 sun1
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:15 moon5
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:15 moon4
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:15 moon3
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:15 moon2
+-rw-r--r--.  1 ec2-user ec2-user     0 May 22 11:18 DHIRAJMEHTA
+drwxr-xr-x.  6 ec2-user ec2-user   116 May 22 11:19 dhiraj
+drwxr-xr-x.  3 ec2-user ec2-user    23 May 22 11:23 nature
+drwxr-xr-x.  6 ec2-user ec2-user   120 May 24 10:24 bhavesh
+-rw-------.  1 ec2-user ec2-user 17992 May 27 07:02 .viminfo
+-rw-------.  1 ec2-user ec2-user 12288 May 27 07:02 .f1.swl
+-rw-------.  1 ec2-user ec2-user 14174 May 27 07:02 .bash_history
+drwxr-xr-x.  2 ec2-user ec2-user     6 May 27 07:14 jitendra
+drwxr-xr-x.  3 ec2-user ec2-user    17 May 27 07:16 kumar
+drwx------. 41 ec2-user ec2-user 16384 May 27 07:16 .
+
+8. Redirect long list of / mount point to your <first name > directory which you had created with a
+file name <mylist>.
+
+ls -l / > jitendra/mylist
+[ec2-user@ip-172-31-39-43 ~]$ cat jitendra/mylist
+total 32
+lrwxrwxrwx.   1 root root     7 Jan 30  2023 bin -> usr/bin
+dr-xr-xr-x.   5 root root 16384 Feb 20 21:12 boot
+drwxr-xr-x.  14 root root  3060 Mar  6 02:20 dev
+drwxr-xr-x.  76 root root 16384 May 14 20:48 etc
+drwxr-xr-x.  10 root root   110 May 14 20:47 home
+lrwxrwxrwx.   1 root root     7 Jan 30  2023 lib -> usr/lib
+lrwxrwxrwx.   1 root root     9 Jan 30  2023 lib64 -> usr/lib64
+drwxr-xr-x.   2 root root     6 Feb 20 21:10 local
+drwxr-xr-x.   2 root root     6 Jan 30  2023 media
+drwxr-xr-x.   2 root root     6 Jan 30  2023 mnt
+drwxr-xr-x.   3 root root    17 Feb 20 21:12 opt
+dr-xr-xr-x. 155 root root     0 Mar  6 02:20 proc
+drwxr-xr-x.   2 root root     6 Mar 21 15:21 ps
+dr-xr-x---.   4 root root   181 May  9 12:36 root
+drwxr-xr-x.  28 root root   820 May  3 08:31 run
+lrwxrwxrwx.   1 root root     8 Jan 30  2023 sbin -> usr/sbin
+drwxr-xr-x.   2 root root     6 Jan 30  2023 srv
+dr-xr-xr-x.  13 root root     0 Mar  6 02:20 sys
+drwxrwxrwt.   7 root root   140 May 27 07:25 tmp
+drwxr-xr-x.   2 root root     6 Mar 20 02:52 u01
+drwxr-xr-x.   2 root root     6 Mar 20 14:15 u02
+drwxr-xr-x.  12 root root   144 Feb 20 21:11 usr
+drwxr-xr-x.  19 root root   266 Mar  6 02:20 var
+drwxr-xr-x.   2 root root     6 Mar 20 06:57 z02
+
+9. Copy <mylist> to <mynewlist>
+
+cp mylist jitendra/mynewlist
+[ec2-user@ip-172-31-39-43 ~]$ ls -l jitendra
+total 4
+-rw-r--r--. 1 ec2-user ec2-user 1242 May 27 07:26 mylist
+-rw-r--r--. 1 ec2-user ec2-user    0 May 27 07:28 mynewlist
+
+
+10. Rename <mylist> to <mylist.old>
+  mv jitendra/mylist jitendra/mylist.old
+[ec2-user@ip-172-31-39-43 ~]$ ls -l jitendra
+total 4
+-rw-r--r--. 1 ec2-user ec2-user 1242 May 27 07:26 mylist.old
+-rw-r--r--. 1 ec2-user ec2-user    0 May 27 07:28 mynewlist
+t
+
+11. Create a new directory with your last name and a sub directory <your location> under ec2-user
+directory (Using single command)
+
+ mkdir _p kumar/jamshedpur
+
+
+12. Copy <first name> directory to <last name>/<your location> directory
+
+ cp -r jitendra kumar/jamshedpur
+[ec2-user@ip-172-31-39-43 ~]$ ls -l kumar
+total 0
+drwxr-xr-x. 3 ec2-user ec2-user 22 May 27 07:51 jamshedpur
+drwxr-xr-x. 2 ec2-user ec2-user  6 May 27 07:16 sha
+[ec2-user@ip-172-31-39-43 ~]$ ls -l kumar/jamshedpur
+total 0
+drwxr-xr-x. 2 ec2-user ec2-user 41 May 27 07:51 jitendra
+
+13. Delete <first name> directory from ec2-user directory
+
+rm -r jitendra 
+
+14. Redirect the output of calendar 2025 to <mynewlist> keeping all previous contain of the file
+<mynewlist>
+
+cal 2025 >> mynewlist
+15. Rename <your location> directory to <your first name>
+
+mv kumar/jamshedpur kumar/jitendra
+[ec2-user@ip-172-31-39-43 ~]$ ls -l kumar
+total 0
+drwxr-xr-x. 3 ec2-user ec2-user 22 May 27 07:51 jitendra
+drwxr-xr-x. 2 ec2-user ec2-user  6 May 27 07:16 sha
+
+
+
+16. Move <your first name> directory to ec2-user directory
+
+ mv kumar/jitendra ec2-user
+ ls -l ec2-user
+total 0
+drwxr-xr-x. 3 ec2-user ec2-user 22 May 27 07:51 jitendra
+17. Create a file <my commands> inside <last name> directory and type all the commands that you
+had learned till date.
+
+vi commands
+
+
+ls- list of file and directoty
+ls-l - long list file and dir
+ls-tl -desending order
+ls-rtl ascending order
+ls-a hide file and dir
+ls-p -file and dir sepration
+cp file name dir -copy file into directory
+cp -r dir1 dir2 - copy of directory
+mv source destination -move file or
+rm file - remove file
+rm -r dir - remove directory
+rm -f dir - remove forcefully dir
+rmdir dir- remove 0 size dir
+cat f1-read mode
+cat > f1- write mode
+cat >> f1 -append mode (write start in last of the content)
+wc-l f1- find line of file
+wc-w f1 - find world of the file
+wc-c f1 - find charactor of file
+wc f1 - find all inforamation(w,c,l) of the file
+grep- used for find world in the filr
+grep-i -used for ignoring upeer or lower case
+greo -v - used for iagnoring that line
+vi f1 - linux editor
+mkdir - make dire
+touch- make file
+
+
+
+18. Append current date to the above file
+ date >> mycommands
+[ec2-user@ip-172-31-39-43 ~]$ cat mycommands
+
+df -h - how many mount point
+ls -what are inside root mount point
+ls -ls
+ls -tl ,ls- rtl
+ls -a ,ls -al
+mkdir dir/subdir, mkdir -p dir, ls -r dir
+ touch file, touch dir/file
+cat >f1. cat >>f1 ,cat f1
+cp s d , cp -r d d ,mv f d , mv -r d d, mv d/f d/f.new
+rm f, rm -r d, rm-f d ,rmdir
+wc -w f1, wc-l f1, wc- w f1 ,wc f1
+grep group f1, grep -i group, grep -v
+more f1 ,tail -10 f1 , head -10 f1
+vi f1
+Sun May  4 08:47:28 UTC 2025
+Tue May 27 09:05:47 UTC 2025
+[ec2-user@ip-172-31-39-43 ~]$
+
+
+
+19. Create a 0byte sized file inside <last name directory
+
+touch kumar/0bite
+ls -l kumar
+total 0
+-rw-r--r--. 1 ec2-user ec2-user 0 May 27 09:08 0bite
+drwxr-xr-x. 2 ec2-user ec2-user 6 May 27 07:16 sha
+
+20. Move the last name directory into your first name directory inside ec2-user
+ mv nigam ec2-user/jayesh
+ls -l ec2-user/jayesh
+total 0
+drwxr-xr-x. 2 ec2-user ec2-user 41 May 27 07:51 jayesh
+drwxr-xr-x. 3 ec2-user ec2-user 30 May 27 09:09 nigam
+
+20. Move last name directory into your first name directory inside ec2-user
+ mv kumar ec2-user/jitendra
+ls -l ec2-user/jitendra
+total 0
+drwxr-xr-x. 2 ec2-user ec2-user 41 May 27 07:51 jitendra
+drwxr-xr-x. 3 ec2-user ec2-user 30 May 27 09:09 kumar
