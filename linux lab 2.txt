@@ -1,0 +1,109 @@
+1. Write a script to accept year of birth and display the current age
+
+Ans: 1. Write a script to accept year of birth and display the current age
+clear
+echo "current year"
+read x
+echo "my birthday year"
+read y
+((s=x-y))
+echo "my age is $s"
+
+file name- mycurrentage
+
+2. Write a script to accept username and find the number of processes are running by the user.
+
+Ans: 
+echo  "enter user name "
+
+read user
+
+echo "no of process running by $user are below"
+
+ps -ef | grep $user | wc -l
+ file name useraccept
+
+3. Write a script to remove a file.
+
+Ans: 
+echo "Enter a file name"
+read file
+rm $file
+echo "your file removed"
+ file name - removefile
+
+4. Create a file and change the permission as owner : rw- group user : r-x public : r—
+
+Ans: 
+drwxr-xr-x. 4 ec2-user ec2-user    57 May 28 17:01 a01
+[ec2-user@ip-172-31-39-43 ~]$ chmod 654 jayesh
+[ec2-user@ip-172-31-39-43 ~]$ ls -l
+
+5. Write a script to count number of files in a directory.
+
+Ans:
+echo "enter directory name"
+read name
+echo "no of file in directory $name are below"
+
+ls -l $name | grep -iv d | wc -l
+
+file name : filecount
+
+6. Display how many times clear command executed.
+
+Ans: 
+[ec2-user@ip-172-31-39-43 ~]$ history | grep clear | wc -l
+32
+
+7. Create a directory path.
+Ans: 
+[ec2-user@ip-172-31-39-43 ~]$ mkdir -p lion/cub/family
+
+8. Display all directory name starts with ‘a’
+Ans:
+ls -p | grep / | grep a*
+or try this also 
+ls -p | grep / | grep ^a.*/
+
+9. Write a script to accept a file name and find the file location
+
+Ans:
+echo "enter file name"
+
+read name
+
+echo " location of file $name below"
+ find /home/ec2-user/ -type f -name $name
+ file name -filename
+
+10. Create a file and store all the commands that you learned.
+
+Ans: 
+ls- list of file and directoty
+ls-l - long list file and dir
+ls-tl -desending order
+ls-rtl ascending order
+ls-a hide file and dir
+ls-p -file and dir sepration
+cp file name dir -copy file into directory
+cp -r dir1 dir2 - copy of directory
+mv source destination -move file or
+rm file - remove file
+rm -r dir - remove directory
+rm -f dir - remove forcefully dir
+rmdir dir- remove 0 size dir
+cat f1-read mode
+cat > f1- write mode
+cat >> f1 -append mode (write start in last of the content)
+wc-l f1- find line of file
+wc-w f1 - find world of the file
+wc-c f1 - find charactor of file
+wc f1 - find all inforamation(w,c,l) of the file
+grep- used for find world in the filr
+grep-i -used for ignoring upeer or lower case
+greo -v - used for iagnoring that line
+vi f1 - linux editor
+mkdir - make dire
+touch- make file
+
